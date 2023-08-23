@@ -39,7 +39,7 @@ export default {
   <main>
     <div class="main-content">
       <ul class="d-flex list-unstyled">
-        <li class="nav-item" v-for="singleIcon in iconList"><a class="nav-link text-white fs-3" href="#"><img :src="getSingleImage(singleImage.img)"> {{ singleIcon.title }}</a></li> <!--sistemare-->
+        <li class="nav-item" v-for="singleIcon in iconList"><a class="nav-link text-white fs-3" href="#"><img :src="getSingleImage(singleIcon.img)"> {{ singleIcon.title }}</a></li> <!--sistemare-->
       </ul>
     </div>
   </main>

@@ -60,11 +60,9 @@ header {
   height: 180px;
   margin: 0 300px;
   padding: 25px;
-
   .nav-link {
     color: $black;
   }
-
   &.active {
     // da sistemare... perche non la prende?
     color: $color-primary;
