@@ -16,7 +16,7 @@ export default {
       <!--QUI CODICE-->
 
       <div class="text-center">
-        <button type="button" class="btn btn-primary fs-4 fw-bold px-5 py-2">LOAD MORE</button>
+        <button type="button" class="btn btn-primary fs-4 fw-bold rounded-0">LOAD MORE</button>
       </div>
       
     </div>
@@ -37,7 +37,6 @@ export default {
   }
   .jumbo-content {
     margin: 0 300px;
-    height: 100%;
     position: relative;
     .series {
       background-color: $color-primary;
@@ -48,6 +47,7 @@ export default {
     }
     button {
       margin-top: 650px; /*controllare se va bene cosi???? */
+      padding: .5rem 4rem;
     }
   }
 }

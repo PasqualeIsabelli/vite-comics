@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     getSingleImage(singleImage) {
-      new URL(`${singleImage}`, import.meta.url).href 
+      return new URL(`${singleImage}`, import.meta.url).href 
     }
   }
 }
@@ -38,8 +38,8 @@ export default {
 <template>
   <main>
     <div class="main-content">
-      <ul class="d-flex list-unstyled">
-        <li class="nav-item" v-for="singleIcon in iconList"><a class="nav-link text-white fs-3" href="#"><img :src="getSingleImage(singleIcon.img)"> {{ singleIcon.title }}</a></li> <!--sistemare-->
+      <ul class="list-unstyled d-flex justify-content-between">
+        <li class="nav-item" v-for="singleIcon in iconList"><a class="nav-link text-white fs-3" href="#0"><img :src="getSingleImage(singleIcon.img)"> {{ singleIcon.title }}</a></li> <!--sistemare-->
       </ul>
     </div>
   </main>
@@ -52,17 +52,19 @@ export default {
 main {
   background-color: $color-primary;
   height: 220px;
-
   .main-content {
     margin: 0 300px;
   }
 
-  ul {
-    justify-content: space-between;
-    /*centratura verticale*/
+  li {
+    line-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   img {
-    width: 70px;
+    width: 80px;
   }
-}</style>
+}
+</style>

@@ -34,7 +34,7 @@ export default {
           <div class="d-flex flex-column flex-wrap">
             <ul v-for="singleCredit in creditsList">
               <h3 class="text-white fw-bold"> {{ singleCredit.title }}</h3>
-              <li v-for="singleLink in singleCredit.credits" class="nav-item list-unstyled"><a class="nav-link" href="#">{{ singleLink }}</a></li>
+              <li v-for="singleLink in singleCredit.credits" class="nav-item list-unstyled"><a class="nav-link" href="#0">{{ singleLink }}</a></li>
             </ul>
           </div>
         </div>
@@ -45,15 +45,15 @@ export default {
     <section class="down">
       <div class="d-flex justify-content-between footer-box-down">
         <div class="footer-down-content">
-          <button type="button" class="btn btn-outline-primary text-white fs-3 fw-bold p-3">SIGN-UP NOW!</button>
+          <button type="button" class="btn btn-outline-primary text-white fs-3 fw-bold p-3 rounded-0 border-5">SIGN-UP NOW!</button>
         </div>
         <div class="footer-down-content d-flex gap-5">
-          <a href="#" class="fs-3 fw-bold text-primary">FOLLOW US</a>
-          <a href="#"><img src="../assets/img/footer-facebook.png" alt="facebook"></a>
-          <a href="#"><img src="../assets/img/footer-twitter.png" alt="twitter"></a>
-          <a href="#"><img src="../assets/img/footer-youtube.png" alt="youtube"></a>
-          <a href="#"><img src="../assets/img/footer-pinterest.png" alt="pinterest"></a>
-          <a href="#"><img src="../assets/img/footer-periscope.png" alt="periscope"></a>
+          <a href="#0" class="fs-3 fw-bold text-primary">FOLLOW US</a>
+          <a href="#0"><img src="../assets/img/footer-facebook.png" alt="facebook"></a>
+          <a href="#0"><img src="../assets/img/footer-twitter.png" alt="twitter"></a>
+          <a href="#0"><img src="../assets/img/footer-youtube.png" alt="youtube"></a>
+          <a href="#0"><img src="../assets/img/footer-pinterest.png" alt="pinterest"></a>
+          <a href="#0"><img src="../assets/img/footer-periscope.png" alt="periscope"></a>
         </div>
       </div>
     </section>

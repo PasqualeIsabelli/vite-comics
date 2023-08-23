@@ -45,7 +45,7 @@ export default {
     <img src="../assets/img/dc-logo.png" alt="dc-logo">
 
     <ul class="nav nav-pills d-flex justify-content-center align-items-center">
-      <li v-for="singleItem in menuList" class="nav-item"><a class="nav-link fw-bold" href="#"> {{ singleItem.name }}</a></li>
+      <li v-for="singleItem in menuList" class="nav-item"><a class="nav-link fw-bold" href="#0"> {{ singleItem.name }}</a></li>
     </ul>
   </header>
 </template>
@@ -62,10 +62,5 @@ header {
   padding: 25px;
   .nav-link {
     color: $black;
-  }
-  &.active {
-    // da sistemare... perche non la prende?
-    color: $color-primary;
-    background-color: $white;
   }
 }</style>
