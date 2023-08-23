@@ -1,6 +1,41 @@
 <script>
 export default {
-
+  data() {
+    return {
+      menuList: [
+        {
+          name: 'CHARACTERS'
+        },
+        {
+          name: 'COMICS'
+        },
+        {
+          name: 'MOVIES'
+        },
+        {
+          name: 'TV'
+        },
+        {
+          name: 'GAMES'
+        },
+        {
+          name: 'COLLECTIBLES'
+        },
+        {
+          name: 'VIDEOS'
+        },
+        {
+          name: 'FANS'
+        },
+        {
+          name: 'NEWS'
+        },
+        {
+          name: 'SHOP'
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -10,16 +45,7 @@ export default {
     <img src="../assets/img/dc-logo.png" alt="dc-logo">
 
     <ul class="nav nav-pills d-flex justify-content-center align-items-center">
-      <li class="nav-item"><a class="nav-link fw-bold" href="#">CHARACTERS</a></li>
-      <li class="nav-item"><a class="nav-link fw-bold active" href="#">COMICS</a></li>
-      <li class="nav-item"><a class="nav-link fw-bold" href="#">MOVIES</a></li>
-      <li class="nav-item"><a class="nav-link fw-bold" href="#">TV</a></li>
-      <li class="nav-item"><a class="nav-link fw-bold" href="#">GAMES</a></li>
-      <li class="nav-item"><a class="nav-link fw-bold" href="#">COLLECTIBLES</a></li>
-      <li class="nav-item"><a class="nav-link fw-bold" href="#">VIDEOS</a></li>
-      <li class="nav-item"><a class="nav-link fw-bold" href="#">FANS</a></li>
-      <li class="nav-item"><a class="nav-link fw-bold" href="#">NEWS</a></li>
-      <li class="nav-item"><a class="nav-link fw-bold" href="#">SHOP</a></li>
+      <li v-for="singleItem in menuList" class="nav-item"><a class="nav-link fw-bold" href="#"> {{ singleItem.name }}</a></li>
     </ul>
   </header>
 </template>
@@ -34,12 +60,14 @@ header {
   height: 180px;
   margin: 0 300px;
   padding: 25px;
+
   .nav-link {
     color: $black;
   }
-  &.active { // da sistemare... perche non la prende?
+
+  &.active {
+    // da sistemare... perche non la prende?
     color: $color-primary;
     background-color: $white;
   }
-}
-</style>
+}</style>

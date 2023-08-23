@@ -1,6 +1,27 @@
 <script>
 export default {
-
+  data() {
+    return {
+      creditsList: [
+        {
+          title: 'DC COMICS',
+          credits: ["Characters", "Comics", "Movies", "TV", "Games", "Videos", "News"]
+        },
+        {
+          title: 'SHOP',
+          credits: ["Shop DC", "Shop DC Collectibles"]
+        },
+        {
+          title: 'DC',
+          credits: ["Terms Of Use", "Privacy policy (New)", "Ad Choices", "Advertising", "Jobs", "Subscriptions", "Talent Workshops", "CPSC Certificates", "Ratings", "Shop Help", "Contact Us"]
+        },
+        {
+          title: 'SITES',
+          credits: ["DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"]
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -10,47 +31,10 @@ export default {
     <section class="up d-flex">
       <div class="d-flex justify-content-between footer-box-up">
         <div class="ul-container d-flex">
-          <div>
-            <ul>
-              <h3 class="text-white fw-bold">DC COMICS</h3>
-              <li class="nav-item"><a class="nav-link" href="#">Characters</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Comics</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Movies</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">TV</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Games</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Videos</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">News</a></li>
-            </ul>
-            <ul>
-              <h3 class="text-white fw-bold pt-5">SHOP</h3>
-              <li class="nav-item"><a class="nav-link" href="#">Shop DC</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Shop DC Collectibles</a></li>
-            </ul>
-          </div>
-          <div class="ms-3">
-            <ul>
-              <h3 class="text-white fw-bold">DC</h3>
-              <li class="nav-item"><a class="nav-link" href="#">Terms Of Use</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Privacy policy (New)</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Ad Choices</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Advertising</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Subscriptions</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Talent Workshops</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">CPSC Certificates</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Ratings</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Shop Help</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="ms-3">
-            <ul>
-              <h3 class="text-white fw-bold">SITES</h3>
-              <li class="nav-item"><a class="nav-link" href="#">DC</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">MAD Magazine</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">DC Kids</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">DC Universe</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">DC Power Visa</a></li>
+          <div class="d-flex flex-column flex-wrap">
+            <ul v-for="singleCredit in creditsList">
+              <h3 class="text-white fw-bold"> {{ singleCredit.title }}</h3>
+              <li v-for="singleLink in singleCredit.credits" class="nav-item list-unstyled"><a class="nav-link" href="#">{{ singleLink }}</a></li>
             </ul>
           </div>
         </div>
@@ -65,11 +49,11 @@ export default {
         </div>
         <div class="footer-down-content d-flex gap-5">
           <a href="#" class="fs-3 fw-bold text-primary">FOLLOW US</a>
-          <img src="../assets/img/footer-facebook.png" alt="facebook">
-          <img src="../assets/img/footer-twitter.png" alt="twitter">
-          <img src="../assets/img/footer-youtube.png" alt="youtube">
-          <img src="../assets/img/footer-pinterest.png" alt="pinterest">
-          <img src="../assets/img/footer-periscope.png" alt="periscope">
+          <a href="#"><img src="../assets/img/footer-facebook.png" alt="facebook"></a>
+          <a href="#"><img src="../assets/img/footer-twitter.png" alt="twitter"></a>
+          <a href="#"><img src="../assets/img/footer-youtube.png" alt="youtube"></a>
+          <a href="#"><img src="../assets/img/footer-pinterest.png" alt="pinterest"></a>
+          <a href="#"><img src="../assets/img/footer-periscope.png" alt="periscope"></a>
         </div>
       </div>
     </section>
@@ -125,6 +109,7 @@ footer {
       margin: 0 300px;
       height: 100%;
     }
+
     .footer-down-content {
       display: flex;
       align-items: center;
@@ -139,4 +124,5 @@ footer {
       }
     }
   }
-}</style>
+}
+</style>
