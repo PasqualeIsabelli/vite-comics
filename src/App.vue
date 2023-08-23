@@ -2,7 +2,8 @@
 import TheHeader from './components/TheHeader.vue';
 import TheFooter from './components/TheFooter.vue';
 import NavBar from './components/NavBar.vue';
-import Jumbo from './components/Jumbo.vue'
+import Jumbo from './components/Jumbo.vue';
+import Card from './assets/db/dc-comics.json';
 
 export default {
   components: {
@@ -12,7 +13,9 @@ export default {
     Jumbo
   },
   data() {
-    return {}
+    return {
+      Card,
+    }
   }
 }
 </script>
@@ -24,7 +27,7 @@ export default {
   </header>
   
   <main>
-    <Jumbo></Jumbo>
+    <Jumbo></Jumbo> <!--INSERIRE ATTR.--> 
     <NavBar></NavBar>
   </main>
 
