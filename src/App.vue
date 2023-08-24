@@ -34,11 +34,10 @@ export default {
       </div>
       <div class="card-content row row-cols-6">
         <div class="col" v-for="(card, i) in cardList" :key="`${i}`">
-          <CardContainer :img-src="card.thumb" :title="card.series"></CardContainer> <!--:price="card.price" :type="card.type"-->
+          <CardContainer :img-src="card.thumb" :title="card.series" :price="card.price" :type="card.type"></CardContainer>
         </div>
       </div>
-      
-      <div class="text-center">
+      <div class="text-center mt-4">
         <button type="button" class="btn btn-primary fs-4 fw-bold rounded-0">LOAD MORE</button>
       </div>
     </div>
@@ -75,7 +74,6 @@ export default {
   margin: 0 300px;
   
   button {
-    margin-top: 620px; /*controllare se va bene cosi???? */
     padding: .5rem 4rem;
   }
 }

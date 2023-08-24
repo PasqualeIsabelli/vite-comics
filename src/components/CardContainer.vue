@@ -11,7 +11,7 @@ export default {
 
 
 <template>
-  <div class="card border-0 h-100">
+  <div class="card h-100 border-0">
     <img :src="imgSrc">
     <div class="card-body text-white fs-4">
       {{ title.toUpperCase() }}
