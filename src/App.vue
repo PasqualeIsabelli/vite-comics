@@ -29,10 +29,10 @@ export default {
   <main>
     <div class="bg-dark pb-5">
       <div class="jumbo-box"></div>
-      <div class="series-container">
+      <div class="series-container mb-5">
         <div class="series"><h2 class="text-white fw-bold">CURRENT SERIES</h2></div>
       </div>
-      <div class="card-content row row-cols-6">
+      <div class="card-content row row-cols-6 gy-3">
         <div class="col" v-for="(card, i) in cardList" :key="`${i}`">
           <CardContainer :img-src="card.thumb" :title="card.series" :price="card.price" :type="card.type"></CardContainer>
         </div>

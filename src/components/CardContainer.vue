@@ -11,14 +11,14 @@ export default {
 
 
 <template>
-  <div class="card h-100 border-0">
+  <div class="card h-100 m-0 border-0">
     <img :src="imgSrc">
     <div class="card-body text-white fs-4">
       {{ title.toUpperCase() }}
     </div>
     <div class="overlay">
-      <span>Prezzo: {{ price }}</span>
-      <span>Genere: {{ type }}</span>
+      <div class="fw-bold fs-1 text-center">Prezzo: {{ price }}</div>
+      <div class="fw-bold fs-1 text-center">Genere: {{ type.toUpperCase() }}</div>
     </div>
   </div>
 </template>
@@ -29,12 +29,23 @@ export default {
 .card {
   margin: 5rem 0 4rem 0;
   background-color: transparent;
-  height: 100px;
+
+  img {
+    height: 450px;
+  }
   .overlay {
     background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    inset: 0;
     opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
   }
-  &.hover{
+  &:hover{
     .overlay {
       opacity: 1;
     }
